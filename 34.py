@@ -94,30 +94,23 @@ def collide_time(x_1,v_1,x_2,v_2)->float:
                     if Dv == [0 for i in range(l)]:
                         print("No hubo colisión, van en paralelo")
                         return None
-                    begin = True
-                    time = 0
+                    sq_x = 0
+                    sq_v = 0
                     for i in range(l):
-                        if Dv[i]==0:
-                            continue
-                        else:
-                            if begin:
-                                time = (-Dx[i])/Dv[i]
-                                begin=False
-                                if time < 0:
-                                    print("No hubo colisión")
-                                    print(Dx,Dv)
-                                    return None
-                            if time!=(-Dx[i])/Dv[i]:
-                                print("No hubo colisión")
-                                return None
-                    else:
-                        pos_1 = [x_1[i]+time*v_1[i] for i in range(l)]
-                        pos_2 = [x_2[i]+time*v_2[i] for i in range(l)]
-                        error = 0
-                        for i in range(l):
-                            error+= (pos_2[i]-pos_1[i])**(0.5)
-                        print(f"si hubo colisión en tiempo {time}, con error {error}")
+                        sq_x+= Dx[i]*Dx[i]
+                        sq_v+= Dv[i]*Dv[i]
+                    time = (sq_x/sq_v)**(0.5)
+                    pos_1 = [x_1[i]+time*v_1[i] for i in range(l)]
+                    pos_2 = [x_2[i]+time*v_2[i] for i in range(l)]
+                    error = 0
+                    for i in range(l):
+                        error+= (pos_2[i]-pos_1[i])**(0.5)
+                    if error<0.001:
+                        print(f"Hubo colisión con error {error} en {pos_1}")
                         return time
+                    else:
+                        print("no hubo colisión")
+                        return None
         else:
             print("Error: tus entradas deben ser números enteros o flotantes")
             return None
