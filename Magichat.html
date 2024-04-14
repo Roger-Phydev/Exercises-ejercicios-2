@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+</head>
+<body>
+    <h2>Sombrero Seleccionador de Hogwarts:</h2>
+    <div>Mago, responde las siguientes preguntas:</div>
+    <form>
+        <div>Estas en mitad de la noche y de repente una persona te ataca, tú...</div>
+        <input type="checkbox" class="one" name="g1" value="g">
+        <label for="g1">te defiendes y luego contratacas</label><br>
+        <input type="checkbox" class="one" name="h1" value="h">
+        <label for="h1">te defiendes y buscas ayuda</label><br>
+        <input type="checkbox" class="one" name="r1" value="r">
+        <label for="r1">te defiendes y huyes</label><br>
+        <input type="checkbox" class="one" name="s1" value="s">
+        <label for="s1">te defiendes y esperas a reconocer a la persona para decidir que hacer</label><br>
+        <hr>
+        <div>Tienes que tomar un libro, ¿Cuál eliges?</div>
+        <input type="checkbox" class="two" name="g2" value="g">
+        <label for="g2">hechizos defensivos y ofensivos</label><br>
+        <input type="checkbox" class="two" name="h2" value="h">
+        <label for="h2">hechizos de soporte y daño en área</label><br>
+        <input type="checkbox" class="two" name="r2" value="r">
+        <label for="r2">alquimia avanzada</label><br>
+        <input type="checkbox" class="two" name="s2" value="s">
+        <label for="s2">hechizos prohibidos</label><br>
+        <hr>
+        <div>Te ofrecen ir a un viaje de gran desarrollo para tí únicamente, tú...</div>
+        <input type="checkbox" class="three" name="g3" value="g">
+        <label for="g3">lo tomas pero después sientes remordimiento por tus amigos</label><br>
+        <input type="checkbox" class="three" name="h3" value="h">
+        <label for="h3">decides no tomarlo, tus amigos son primero</label><br>
+        <input type="checkbox" class="three" name="r3" value="r">
+        <label for="r3">tomas el viaje, pero buscas la manera de anotar lo que viste para compartirlo</label><br>
+        <input type="checkbox" class="three" name="s3" value="s">
+        <label for="s3">lo tomas sin dudar</label><br>
+        <button id="ok">Listo,terminé</button>
+    </form>
+    <article>
+        <h3>Tus resultados:</h3>
+        <h4 id="res"></h4>
+    </article>
+    <script src="07.JS"></script>
+</body>
+</html>

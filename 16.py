@@ -2,7 +2,7 @@ import re
 def text_analysis(an_string):
     if type(an_string)==str:
         an_string = an_string.lower()
-        words = re.findall(r"(?<=\s)[a-záéíóúñ]+|^[a-záéíóúñ]+",an_string) #creamos una lista con las palabras, las cuales solo tienen letras de la a-z con acento o ñ
+        words = re.findall(r"(?<=\W)[a-záéíóúñ]+|^[a-záéíóúñ]+",an_string) #creamos una lista con las palabras, las cuales solo tienen letras de la a-z con acento o ñ
         #además, si empieza la cadena con la palabra, también es válido
         phrases = an_string.split(".") #separamos usando el punto para obtener las frases
         l=0 #longitud media

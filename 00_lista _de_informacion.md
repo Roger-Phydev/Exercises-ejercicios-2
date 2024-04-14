@@ -102,9 +102,9 @@
 * Debes indicarle el número de filas de los triángulos con un entero positivo (n).
 * Cada triángulo calculará su fila mayor utilizando la fórmula 2n-1.
 ### Ejemplo: Trifuerza 2
->###  \*
+>###     \*
 >###   \*\*\*
->###     \*   \*
+>### *  *   \*
 >### \*\*\* \*\*\*
 
 ## 18. Primos gemelos

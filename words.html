@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de palabras</title>
+</head>
+<body>
+    <h2>Adivina la palabra</h2>
+    <div id="word" style="display: none;"></div>
+    <h4 id="status">Selecciona dificultad e intentos</h4>
+    <div id="difficult">
+        <select name="d">
+            <option>Fácil</option>
+            <option>Normal</option>
+            <option>Difícil</option>
+        </select>
+        <label for="d">dificultad</label>
+        <br>
+        <select name="a">
+            <option>5</option>
+            <option>10</option>
+            <option>15</option>
+        </select>
+        <label for="a">Intentos</label>
+        <br>
+        <button>¡Vamos a jugar!</button>
+    </div>
+    <div id="area" style="display: none;">
+        <input type="text" value="">
+        <button>Confirmar, respuesta</button>
+    </div>
+    <button id="reload" style="display: none;">Volver a jugar</button>
+    <script src="12.js"></script>
+</body>
+</html>

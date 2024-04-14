@@ -3,7 +3,6 @@ p = "📄"
 s = "✂️"
 sp = "🖖"
 l = "🦎"
-print(s)
 def who_win(list_of_plays):
     if type(list_of_plays)==list: #los primeros 3 if serán filtros para verificar formatos
         a = True
